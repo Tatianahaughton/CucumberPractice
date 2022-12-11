@@ -1,12 +1,20 @@
 Class 1 -
-
 BDD - behavioral driven development -
-	Given
-	When
-	And
-	Then
-We use BDD scenarios - to give a clear understanding to other colleagues in the team
+Feature file (.feature)-User Story
+User story can have multiple scenarios aka test cases.
+Scenario is a Test case:
 
+	Given-pre requisite/pre condition
+	When-action taken
+	And supporting tag
+	Then-expected output
+
+	Ste definition-We write code to perform actions which has been written in the BDD statement.
+	Cucumber provides just a snippet of it.
+
+	To execute all the feature files from onr class, we use a runner class
+
+We use BDD scenarios - to give a clear understanding to other colleagues in the team
 
 To write the BDD scenarios in cucumber - we use special type of file
 
@@ -33,4 +41,36 @@ And user clicks on employee information button
 When user enters valid employee name
 And user clicks on search button
 Then user see employee information is displayed
+
+Every test case is considered as Scenario in BDD.
+Feature-User stories.
+Scenarios
+
+Steps package-for all step definitions
+runners package-for all runner classes
+config directory-for all config files
+features directory-for all feature files
+
+POM-Page Object Model-it's a design pattern
+Allows QA's to keep object repository in simple language
+QA's write all the locators of the page in respective class
+
+Pages:
+LoginPage-
+DashboardPage-
+
+Hooks-pre conditions and post condition in Cucumber
+@Before-pre condition
+@After-post condition
+
+Rules-Hooks class must be created inside package
+
+Background-put all the same steps from ONE feature file into it, all up to the part where flow breaks.
+For every feature file, background will be different
+
+Hooks vs background
+
+Hooks are applicable for whole project(all feature files)
+BG is applicable for one feature file and varies from file to file
+Hooks execute first, then background then scenarios.
 
