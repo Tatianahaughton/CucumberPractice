@@ -29,3 +29,16 @@ Feature: Add Employee
           |Tatiana    |Haughton  |
           |Ayden      |Johnson   |
           |Adelina    |Barrow    |
+
+        @datatable
+        Scenario: Adding multiple employees using data table
+          When user adds multiple employees and verifies they are added successfully
+          |firstName|middleName|lastName|
+          |zara     |MS        |camila  |
+          |birgul   |MS        |Reeno   |
+          |Bob      |MS        |Jones   |
+
+          @excel
+          Scenario: Adding multiple employees using Excel file
+            When user adds multiple employees from excel using "EmployeeData" and verifies it
+

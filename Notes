@@ -66,11 +66,28 @@ Hooks-pre conditions and post condition in Cucumber
 Rules-Hooks class must be created inside package
 
 Background-put all the same steps from ONE feature file into it, all up to the part where flow breaks.
-For every feature file, background will be different
+For every feature file, background will be different.
 
 Hooks vs background
 
 Hooks are applicable for whole project(all feature files)
 BG is applicable for one feature file and varies from file to file
 Hooks execute first, then background then scenarios.
+
+Parameterization testing-
+instead of passing hard coded data, we pass values inside the scenario
+
+To increase the scope of testing, we use Data-driven testing concept.
+Instead of scenario, we use scenario outline with examples table
+In example table, we pass multiple data using keys and values.
+
+Data table-allows to pass multiple sets of data without executing background
+Outline-Examples table-hooks and bg execute everytime as per data set
+Scenario-data table-hooks and bg execute just once
+
+
+Working with Excel
+.xls-HSSF extension
+.xlsx-XSSF format
+
 

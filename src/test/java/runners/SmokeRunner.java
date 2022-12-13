@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
         //it will quickly scan all the gherkin steps whether they are implemented or not
         //when we reset to false,starts execution again
         dryRun = false,
-        tags = "@Outline", //use tag to bring up all the test cases that were done in those Sprints
+        tags = "@excel", //use tag to bring up all the test cases that were done in those Sprints
         //to remove irrelevant information from console we need to set monochrome to true
         monochrome=true,
         //pretty keyword prints the steps in the console to increase readability

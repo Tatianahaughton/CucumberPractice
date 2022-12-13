@@ -21,3 +21,13 @@ Scenario: Invalid admin login
   When user enters invalid username and password
   And user clicks on login button
   Then error message displayed
+
+  @tc1105
+  Scenario Outline: Invalid login functionality
+    When user enters different "<username>" and "<password>" and verify the "<error>" for it
+    Examples:
+      | username | password | error |
+      |admin     |cristiana |Invalid credentials|
+      |ronaldo   |Hum@nhrm123|Invalid credentials|
+      |          |Hum@nhrm123|Username cannot be empty|
+      |admin     |           |Password cannot be empty|
